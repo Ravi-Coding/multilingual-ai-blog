@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
   try {
-    const { text, targetLang } = await req.json();
+    const { text } = await req.json();
 
     const apiKey = process.env.HUGGINGFACE_API_KEY;
     if (!apiKey) {
