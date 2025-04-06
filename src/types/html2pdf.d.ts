@@ -1,4 +1,4 @@
 declare module 'html2pdf.js' {
-  const html2pdf: unknown; // or use `typeof import("html2pdf.js")` if types exist
+  const html2pdf: any;
   export default html2pdf;
 }

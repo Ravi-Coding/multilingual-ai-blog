@@ -21,12 +21,13 @@ export default function BlogCard({ content }: BlogCardProps) {
 
   const handleDownload = async () => {
     if (typeof window !== 'undefined') {
-      const html2pdf = (await import('html2pdf.js')).default;
+      const html2pdf = (await import('html2pdf.js')).default as any;
       if (blogRef.current) {
         html2pdf().from(blogRef.current).save('blog.pdf');
       }
     }
   };
+  
 
   const handleShare = async () => {
     if (navigator.share) {
